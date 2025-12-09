@@ -1,6 +1,6 @@
 export default {
   title: 'Descargar Miniatura de Youtube',
-  subtitle: 'Simplemente pegue la URL del video en el campo de entrada a continuación y haga clic en Obtener Imágenes de Miniatura',
+  subtitle: 'Simplemente pegue la URL del video en el campo de entrada a continuación y haga clic en Obtener Imágenes de Miniatura. No se requiere inicio de sesión.',
   inputPlaceholder: 'Ingrese la URL de youtube aquí.',
   getThumbnailButton: 'Obtener Imágenes de Miniatura',
   errorInvalidUrl: 'Por favor ingrese un enlace de video de YouTube válido',

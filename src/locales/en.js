@@ -1,6 +1,6 @@
 export default {
   title: 'Download Youtube Thumbnail',
-  subtitle: 'Just paste the URL of the thumbnail video in the below input and click Get Thumbnail Image',
+  subtitle: 'Just paste the URL of the thumbnail video in the below input and click Get Thumbnail Image. No login required.',
   inputPlaceholder: 'Enter the youtube URL here.',
   getThumbnailButton: 'Get Thumbnail Images',
   errorInvalidUrl: 'Please enter a valid YouTube video link',

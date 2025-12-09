@@ -1,6 +1,6 @@
 export default {
   title: 'Unduh Thumbnail Youtube',
-  subtitle: 'Cukup tempelkan URL video di input di bawah ini dan klik Dapatkan Gambar Thumbnail',
+  subtitle: 'Cukup tempelkan URL video di input di bawah ini dan klik Dapatkan Gambar Thumbnail. Tidak perlu login.',
   inputPlaceholder: 'Masukkan URL youtube di sini.',
   getThumbnailButton: 'Dapatkan Gambar Thumbnail',
   errorInvalidUrl: 'Silakan masukkan tautan video YouTube yang valid',
