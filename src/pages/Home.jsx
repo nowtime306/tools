@@ -52,29 +52,39 @@ function Home() {
 
   const thumbnailSizes = [
     {
-      name: t('thumbnailDefault'),
-      url: `https://img.youtube.com/vi/${videoId}/default.jpg`,
-      size: '120x90',
-    },
-    {
-      name: t('thumbnailMedium'),
-      url: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
-      size: '320x180',
-    },
-    {
-      name: t('thumbnailHigh'),
-      url: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-      size: '480x360',
+      name: t('thumbnailMaxRes'),
+      url: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+      size: '1280x720',
+      width: 1280,
+      height: 720,
     },
     {
       name: t('thumbnailSD'),
       url: `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
       size: '640x480',
+      width: 640,
+      height: 480,
     },
     {
-      name: t('thumbnailMaxRes'),
-      url: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-      size: '1280x720',
+      name: t('thumbnailHigh'),
+      url: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+      size: '480x360',
+      width: 480,
+      height: 360,
+    },
+    {
+      name: t('thumbnailMedium'),
+      url: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`,
+      size: '320x180',
+      width: 320,
+      height: 180,
+    },
+    {
+      name: t('thumbnailDefault'),
+      url: `https://img.youtube.com/vi/${videoId}/default.jpg`,
+      size: '120x90',
+      width: 120,
+      height: 90,
     },
   ]
 
@@ -178,11 +188,24 @@ function Home() {
                   <div className="thumbnail-info">
                     <h3>{thumbnail.name} ({thumbnail.size})</h3>
                   </div>
-                  <div className="thumbnail-image-container">
+                  <div 
+                    className="thumbnail-image-container"
+                    style={{
+                      aspectRatio: `${thumbnail.width} / ${thumbnail.height}`,
+                      width: `${thumbnail.width}px`,
+                      maxWidth: '100%'
+                    }}
+                  >
                     <img
                       src={thumbnail.url}
                       alt={`${t('thumbnailDefault')} ${thumbnail.size}`}
                       className="thumbnail-image"
+                      width={thumbnail.width}
+                      height={thumbnail.height}
+                      style={{
+                        width: '100%',
+                        height: 'auto'
+                      }}
                       onError={(e) => {
                         e.target.style.display = 'none'
                         e.target.nextSibling.style.display = 'block'
