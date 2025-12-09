@@ -81,7 +81,7 @@ function PrivacyPolicy() {
   }
 
   // 设置日期（可以使用固定日期或当前日期）
-  const policyDate = new Date('2024-01-01')
+  const policyDate = new Date('2025-12-09')
 
   return (
     <div className="privacy-page">

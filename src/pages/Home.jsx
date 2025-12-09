@@ -172,7 +172,6 @@ function Home() {
 
         {videoId && (
           <div className="thumbnails-container">
-            <h2 className="thumbnails-title">{t('thumbnailsTitle')}</h2>
             <div className="thumbnails-grid">
               {thumbnailSizes.map((thumbnail, index) => (
                 <div key={index} className="thumbnail-card">
