@@ -14,6 +14,7 @@
 - ✅ 一键下载功能
 - ✅ 响应式设计，支持移动端
 - ✅ 现代化 UI 设计
+- ✅ 多语言支持（英语、西班牙语、葡萄牙语、印地语、印尼语、阿拉伯语）
 
 ## 安装和运行
 
@@ -37,11 +38,38 @@ npm run dev
 npm run build
 ```
 
+构建输出将在 `dist` 目录
+
 ### 预览生产版本
 
 ```bash
 npm run preview
 ```
+
+## Netlify 部署
+
+### 部署步骤
+
+1. 将代码推送到 GitHub/GitLab/Bitbucket
+2. 登录 [Netlify](https://www.netlify.com/)
+3. 点击 "New site from Git"
+4. 选择你的代码仓库
+5. Netlify 会自动检测配置：
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+6. 点击 "Deploy site"
+
+### 配置文件
+
+项目已包含 `netlify.toml` 配置文件，包含：
+- 构建命令和发布目录
+- SPA 路由重定向规则（所有路由重定向到 index.html）
+
+### 注意事项
+
+- 确保 `netlify.toml` 文件在项目根目录
+- 确保 `public/_redirects` 文件存在（用于 SPA 路由）
+- 如果部署后无法访问，检查 Netlify 构建日志
 
 ## 使用方法
 
@@ -60,6 +88,7 @@ npm run preview
 ## 技术栈
 
 - React 18
+- React Router DOM
 - Vite
 - 纯 CSS（无第三方 UI 库）
 
